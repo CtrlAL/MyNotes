@@ -29,7 +29,7 @@ sudo usermod -aG docker $USER  # чтобы не использовать sudo
 ```bash
 docker run -d \
   --name keycloak \
-  -p 8080:8080 \
+  -p 8090:8080 \
   -e KEYCLOAK_ADMIN=admin \
   -e KEYCLOAK_ADMIN_PASSWORD=admin \
   quay.io/keycloak/keycloak:24.0 start-dev
@@ -38,10 +38,7 @@ docker run -d \
 > ⚠️ `start-dev` — только для разработки! Не для продакшена.
 
 Теперь Keycloak доступен по адресу:  
-👉 **http://[IP_VM]:8080**
-
-Например, если IP твоей VM — `192.168.1.100`, то:  
-**http://192.168.1.100:8080**
+👉 **http://[IP_VM]:8090**
 
 ---
 
